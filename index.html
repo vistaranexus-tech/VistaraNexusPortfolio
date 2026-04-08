@@ -1,27 +1,33 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vistara Nexus Consulting FZC LLC</title>
+<title>Vistara Nexus Consulting</title>
+
+<!-- ICONS -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
 body{
 margin:0;
-font-family:Inter,system-ui;
+font-family:'Inter',sans-serif;
 background:#0B0F19;
-color:white;
-line-height:1.6;
+color:#fff;
+line-height:1.7;
 }
 
-header{
-padding:90px 10%;
-background:linear-gradient(120deg,#0B0F19,#101828);
+section{
+padding:70px 10%;
 }
 
 h1{
-font-size:52px;
+font-size:48px;
 margin-bottom:10px;
 }
 
@@ -30,41 +36,68 @@ color:#2F80ED;
 margin-bottom:25px;
 }
 
-.container{
-padding:80px 10%;
+p{
+color:#B8C1CC;
+}
+
+header{
+padding:100px 10%;
+background:linear-gradient(120deg,#0B0F19,#101828);
+}
+
+.btn{
+background:#2F80ED;
+padding:12px 24px;
+border-radius:6px;
+border:none;
+color:white;
+margin-right:10px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#1d5fd0;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:30px;
 }
 
 .card{
 background:#111827;
 padding:30px;
-border-radius:14px;
-transition:.3s;
+border-radius:12px;
+transition:.3s ease;
 }
 
 .card:hover{
-transform:translateY(-8px);
-box-shadow:0 10px 30px rgba(0,0,0,.5);
+transform:translateY(-5px);
 }
 
-button{
-background:#2F80ED;
-border:none;
-padding:14px 28px;
-color:white;
-border-radius:8px;
-cursor:pointer;
-font-size:16px;
-margin-right:12px;
+.icon{
+margin-bottom:15px;
+color:#2F80ED;
 }
 
-button:hover{
-background:#1b63c7;
+.swot-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.swot-box{
+background:#111827;
+padding:20px;
+border-radius:10px;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:40px;
+color:#B8C1CC;
 }
 
 .highlight{
@@ -72,191 +105,143 @@ color:#C9A227;
 font-weight:600;
 }
 
-footer{
-background:#020617;
-padding:50px;
-text-align:center;
-color:#aaa;
-}
-
-ul{
-padding-left:20px;
-}
-
-.hero-sub{
-font-size:20px;
-opacity:.8;
-max-width:700px;
-margin-bottom:30px;
-}
-
-.section-title{
-margin-bottom:40px;
-}
-
-.swot{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-
-.swot div{
-background:#111827;
-padding:20px;
-border-radius:10px;
-}
-
 </style>
 </head>
 
 <body>
 
-
 <header>
 
 <h1>Vistara Nexus Consulting FZC LLC</h1>
 
-<p class="hero-sub">
+<p>
 Strategic Business Support for Sustainable Growth
 </p>
 
 <p>
-Integrated consulting, compliance, accounting, digital infrastructure,
-and corporate support solutions for entrepreneurs, startups,
-and growing businesses across the UAE.
+Integrated consulting, compliance, accounting and digital infrastructure
+solutions supporting startups and businesses across the UAE.
 </p>
 
-<button onclick="scrollToSection('services')">Explore Services</button>
-<button onclick="scrollToSection('contact')">Contact Us</button>
+<button class="btn" onclick="scrollToSection('services')">
+Explore Services
+</button>
+
+<button class="btn" onclick="scrollToSection('contact')">
+Contact Us
+</button>
 
 </header>
 
 
-<section class="container">
+<section>
 
-<h2>About Vistara Nexus Consulting</h2>
-
-<p>
-Vistara Nexus Consulting FZC LLC is a UAE-based business consulting and
-support services company providing integrated solutions designed to support
-entrepreneurs, startups, and growing businesses in setting up,
-managing, and expanding their operations across the UAE.
-</p>
+<h2>About</h2>
 
 <p>
-Our approach focuses on operational efficiency, professional consulting,
-digital solutions, and administrative support — enabling our clients to
-concentrate on business growth while we handle complex business processes.
+
+Vistara Nexus Consulting FZC LLC provides integrated business consulting
+and support services helping entrepreneurs and companies establish,
+manage and expand operations efficiently within the UAE.
+
 </p>
 
 </section>
 
 
-
-<section class="container">
+<section>
 
 <h2>Mission</h2>
 
 <p>
-To deliver comprehensive consulting and business support services that help
-clients establish, manage, and grow their businesses efficiently within the UAE.
+
+Deliver comprehensive consulting and business support services enabling
+clients to establish manage and grow efficiently within the UAE.
+
 </p>
+
 
 <h2>Vision</h2>
 
 <p>
-To simplify complex business operations, administrative processes, and
-regulatory requirements, allowing clients to focus on their core business
-objectives while maintaining strong standards of professionalism,
-compliance, and service excellence.
+
+Simplify complex business operations administrative processes and
+regulatory requirements while maintaining strong standards of compliance
+and service excellence.
+
 </p>
 
 </section>
 
 
+<section id="services">
 
-<section class="container" id="services">
-
-<h2 class="section-title">Our Best Services</h2>
+<h2>Services</h2>
 
 <div class="grid">
 
 
 <div class="card">
 
-<h3>Business Setup & Corporate Support</h3>
+<i data-lucide="building" class="icon"></i>
 
-<ul>
-<li>Mainland & Free Zone Company Formation</li>
-<li>Trade License Processing & Renewals</li>
-<li>Bank Account Opening Assistance</li>
-<li>Visa Application & PRO Services</li>
-<li>Document Clearing & Government Approvals</li>
-</ul>
+<h3>Business Setup</h3>
+
+<p>
+Mainland & Freezone formation license processing visa services bank account assistance and government approvals.
+</p>
 
 </div>
 
 
-
 <div class="card">
 
-<h3>Financial & Accounting Services</h3>
+<i data-lucide="calculator" class="icon"></i>
 
-<ul>
-<li>Bookkeeping & Financial Reporting</li>
-<li>Crypto Accounting & Reconciliation</li>
-<li>VAT Registration, Filing & Compliance</li>
-<li>Corporate Tax Registration & Support</li>
-<li>Payroll Management</li>
-</ul>
+<h3>Accounting Services</h3>
+
+<p>
+Bookkeeping VAT filing corporate tax registration payroll management and crypto accounting reconciliation.
+</p>
 
 </div>
 
 
-
 <div class="card">
 
-<h3>Compliance & Regulatory Consulting</h3>
+<i data-lucide="shield-check" class="icon"></i>
 
-<ul>
-<li>AML / KYC Policy Setup & Implementation</li>
-<li>MSB & VASP Compliance Support</li>
-<li>Transaction Monitoring Frameworks</li>
-<li>Risk Assessments & Due Diligence</li>
-<li>Cross-border Regulatory Advisory</li>
-</ul>
+<h3>Compliance Consulting</h3>
+
+<p>
+AML KYC MSB VASP compliance transaction monitoring frameworks risk assessments and due diligence.
+</p>
 
 </div>
 
 
-
 <div class="card">
 
-<h3>Digital Web & Graphic Design</h3>
+<i data-lucide="palette" class="icon"></i>
 
-<ul>
-<li>Business, E-commerce & Portfolio Websites</li>
-<li>Logo & Brand Identity Design</li>
-<li>Business Cards & Letterheads</li>
-<li>Social Media Marketing Creatives</li>
-<li>YouTube Thumbnails & Channel Branding</li>
-</ul>
+<h3>Digital Design</h3>
+
+<p>
+Business websites ecommerce stores logo design branding marketing creatives and YouTube assets.
+</p>
 
 </div>
 
 
-
 <div class="card">
 
-<h3>E-Commerce & Online Support</h3>
+<i data-lucide="shopping-cart" class="icon"></i>
 
-<ul>
-<li>Shopify Store Setup & Management</li>
-<li>Print-on-Demand Integration</li>
-<li>Payment Gateway Setup</li>
-<li>Product Upload & Store Optimization</li>
-<li>Platform Integration & Maintenance</li>
-</ul>
+<h3>Ecommerce Support</h3>
+
+<p>
+Shopify setup print-on-demand gateway integration product upload automation and maintenance.
+</p>
 
 </div>
 
@@ -266,52 +251,49 @@ compliance, and service excellence.
 </section>
 
 
-
-<section class="container">
+<section>
 
 <h2>Industry Focus</h2>
 
 <p>
-We provide expert compliance and regulatory consulting services particularly
-for businesses operating in <span class="highlight">FinTech, cryptocurrency,
-and cross-border environments</span>, ensuring alignment with both local
-and international regulatory standards.
+
+Specialized consulting support for
+
+<span class="highlight">
+
+FinTech cryptocurrency startups cross-border operations and digital business infrastructure.
+
+</span>
+
 </p>
 
 </section>
 
 
-
-<section class="container">
+<section>
 
 <h2>SWOT Analysis</h2>
 
-<div class="swot">
+<div class="swot-grid">
 
-<div>
+<div class="swot-box">
 <h3>Strengths</h3>
-Strong finance expertise, crypto compliance knowledge,
-multi-service consulting solutions
+Finance expertise crypto compliance capability integrated consulting services
 </div>
 
-<div>
+<div class="swot-box">
 <h3>Weaknesses</h3>
-New brand presence, limited testimonials,
-developing exposure across regions
+New brand presence limited testimonials regional exposure developing
 </div>
 
-<div>
+<div class="swot-box">
 <h3>Opportunities</h3>
-Growing startup ecosystem,
-fintech expansion,
-increasing regulatory compliance demand
+Startup ecosystem growth fintech expansion compliance demand rising
 </div>
 
-<div>
+<div class="swot-box">
 <h3>Threats</h3>
-Competitive consulting market,
-frequent regulatory changes,
-client trust challenges
+Competitive consulting market regulatory changes client trust acquisition phase
 </div>
 
 </div>
@@ -319,14 +301,12 @@ client trust challenges
 </section>
 
 
+<section id="contact">
 
-<section class="container" id="contact">
-
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 
 <p>
-At Vistara Nexus Consulting, we're here to support your business journey
-from setup to growth across the UAE.
+At Vistara Nexus Consulting we support your business journey from setup to growth across the UAE.
 </p>
 
 <p><span class="highlight">Phone:</span> +971 56 985 3322</p>
@@ -336,7 +316,6 @@ from setup to growth across the UAE.
 </section>
 
 
-
 <footer>
 
 Supporting your business journey from setup to growth across the UAE and beyond.
@@ -344,8 +323,9 @@ Supporting your business journey from setup to growth across the UAE and beyond.
 </footer>
 
 
-
 <script>
+
+lucide.createIcons();
 
 function scrollToSection(id){
 document.getElementById(id).scrollIntoView({
