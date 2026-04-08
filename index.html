@@ -1,124 +1,239 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vistara Nexus Consulting</title>
 
-<!-- ICONS -->
+<title>Vistara Nexus Consulting FZC LLC</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
-
-<!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-body{
+:root{
+--primary:#2F80ED;
+--accent:#C9A227;
+--bg:#0B0F19;
+--card:#111827;
+--text:#ffffff;
+--sub:#B8C1CC;
+}
+
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
 font-family:'Inter',sans-serif;
-background:#0B0F19;
-color:#fff;
-line-height:1.7;
+background:var(--bg);
+color:var(--text);
+scroll-behavior:smooth;
 }
 
-section{
-padding:70px 10%;
+
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:rgba(11,15,25,.85);
+backdrop-filter:blur(12px);
+z-index:1000;
 }
 
-h1{
-font-size:48px;
-margin-bottom:10px;
+nav a{
+color:var(--sub);
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
 }
 
-h2{
-color:#2F80ED;
-margin-bottom:25px;
+nav a:hover{
+color:white;
 }
 
-p{
-color:#B8C1CC;
-}
+
+/* HERO */
 
 header{
-padding:100px 10%;
+padding:120px 10%;
 background:linear-gradient(120deg,#0B0F19,#101828);
 }
 
+.hero-sub{
+color:var(--accent);
+margin-bottom:10px;
+}
+
+.hero-title{
+font-size:54px;
+font-weight:700;
+margin-bottom:15px;
+}
+
+.hero-desc{
+max-width:650px;
+color:var(--sub);
+margin-bottom:30px;
+}
+
+
+/* BUTTONS */
+
 .btn{
-background:#2F80ED;
-padding:12px 24px;
-border-radius:6px;
+background:var(--primary);
 border:none;
+padding:14px 28px;
+border-radius:6px;
 color:white;
-margin-right:10px;
 cursor:pointer;
+margin-right:10px;
+font-size:15px;
 }
 
 .btn:hover{
 background:#1d5fd0;
 }
 
+
+/* SECTIONS */
+
+section{
+padding:80px 10%;
+}
+
+h2{
+color:var(--primary);
+margin-bottom:25px;
+}
+
+p{
+color:var(--sub);
+}
+
+
+/* GRID */
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
+
+/* CARDS */
+
 .card{
-background:#111827;
+background:rgba(17,24,39,.7);
 padding:30px;
-border-radius:12px;
+border-radius:14px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.05);
 transition:.3s ease;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-6px);
+border-color:var(--primary);
 }
+
+
+/* ICON */
 
 .icon{
+color:var(--primary);
 margin-bottom:15px;
-color:#2F80ED;
 }
 
-.swot-grid{
+
+/* SWOT */
+
+.swot{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
 }
 
-.swot-box{
-background:#111827;
+.swot div{
+background:var(--card);
 padding:20px;
 border-radius:10px;
 }
 
-footer{
-background:#020617;
-text-align:center;
-padding:40px;
-color:#B8C1CC;
+
+/* CONTACT */
+
+.contact span{
+color:var(--accent);
+font-weight:600;
 }
 
-.highlight{
-color:#C9A227;
-font-weight:600;
+
+/* FOOTER */
+
+footer{
+background:#020617;
+padding:50px;
+text-align:center;
+color:var(--sub);
+}
+
+
+/* WHATSAPP BUTTON */
+
+.whatsapp{
+position:fixed;
+bottom:30px;
+right:30px;
+background:#25D366;
+padding:14px;
+border-radius:50%;
+box-shadow:0 6px 20px rgba(0,0,0,.4);
+}
+
+.whatsapp:hover{
+transform:scale(1.1);
 }
 
 </style>
 </head>
 
+
 <body>
+
+
+<nav>
+
+<strong>Vistara Nexus</strong>
+
+<div>
+<a href="#">Home</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+
 
 <header>
 
-<h1>Vistara Nexus Consulting FZC LLC</h1>
-
-<p>
+<div class="hero-sub">
 Strategic Business Support for Sustainable Growth
-</p>
+</div>
 
-<p>
+<div class="hero-title">
+Vistara Nexus Consulting FZC LLC
+</div>
+
+<p class="hero-desc">
 Integrated consulting, compliance, accounting and digital infrastructure
 solutions supporting startups and businesses across the UAE.
 </p>
@@ -134,44 +249,19 @@ Contact Us
 </header>
 
 
+
 <section>
 
 <h2>About</h2>
 
 <p>
-
-Vistara Nexus Consulting FZC LLC provides integrated business consulting
-and support services helping entrepreneurs and companies establish,
-manage and expand operations efficiently within the UAE.
-
+Vistara Nexus Consulting FZC LLC provides integrated consulting,
+compliance, accounting and digital support services helping entrepreneurs
+and businesses establish manage and expand operations efficiently within the UAE.
 </p>
 
 </section>
 
-
-<section>
-
-<h2>Mission</h2>
-
-<p>
-
-Deliver comprehensive consulting and business support services enabling
-clients to establish manage and grow efficiently within the UAE.
-
-</p>
-
-
-<h2>Vision</h2>
-
-<p>
-
-Simplify complex business operations administrative processes and
-regulatory requirements while maintaining strong standards of compliance
-and service excellence.
-
-</p>
-
-</section>
 
 
 <section id="services">
@@ -182,73 +272,44 @@ and service excellence.
 
 
 <div class="card">
-
 <i data-lucide="building" class="icon"></i>
-
-<h3>Business Setup</h3>
-
-<p>
-Mainland & Freezone formation license processing visa services bank account assistance and government approvals.
-</p>
-
+<h3>Business Setup & Corporate Support</h3>
+Mainland & Freezone formation trade licensing visas banking approvals PRO services
 </div>
 
 
 <div class="card">
-
 <i data-lucide="calculator" class="icon"></i>
-
 <h3>Accounting Services</h3>
-
-<p>
-Bookkeeping VAT filing corporate tax registration payroll management and crypto accounting reconciliation.
-</p>
-
+Bookkeeping VAT filing corporate tax payroll crypto accounting reconciliation
 </div>
 
 
 <div class="card">
-
 <i data-lucide="shield-check" class="icon"></i>
-
 <h3>Compliance Consulting</h3>
-
-<p>
-AML KYC MSB VASP compliance transaction monitoring frameworks risk assessments and due diligence.
-</p>
-
+AML KYC MSB VASP monitoring frameworks risk assessment due diligence advisory
 </div>
 
 
 <div class="card">
-
 <i data-lucide="palette" class="icon"></i>
-
-<h3>Digital Design</h3>
-
-<p>
-Business websites ecommerce stores logo design branding marketing creatives and YouTube assets.
-</p>
-
+<h3>Digital Branding</h3>
+Business websites ecommerce stores logos marketing creatives YouTube branding
 </div>
 
 
 <div class="card">
-
 <i data-lucide="shopping-cart" class="icon"></i>
-
-<h3>Ecommerce Support</h3>
-
-<p>
-Shopify setup print-on-demand gateway integration product upload automation and maintenance.
-</p>
-
+<h3>E-Commerce Support</h3>
+Shopify POD gateway setup product upload automation store optimization maintenance
 </div>
 
 
 </div>
 
 </section>
+
 
 
 <section>
@@ -256,44 +317,40 @@ Shopify setup print-on-demand gateway integration product upload automation and 
 <h2>Industry Focus</h2>
 
 <p>
-
 Specialized consulting support for
-
-<span class="highlight">
-
-FinTech cryptocurrency startups cross-border operations and digital business infrastructure.
-
-</span>
-
+<strong style="color:var(--accent)">
+FinTech cryptocurrency startups cross-border business infrastructure
+</strong>
 </p>
 
 </section>
+
 
 
 <section>
 
 <h2>SWOT Analysis</h2>
 
-<div class="swot-grid">
+<div class="swot">
 
-<div class="swot-box">
+<div>
 <h3>Strengths</h3>
-Finance expertise crypto compliance capability integrated consulting services
+Finance expertise crypto compliance multi-service consulting capability
 </div>
 
-<div class="swot-box">
+<div>
 <h3>Weaknesses</h3>
 New brand presence limited testimonials regional exposure developing
 </div>
 
-<div class="swot-box">
+<div>
 <h3>Opportunities</h3>
 Startup ecosystem growth fintech expansion compliance demand rising
 </div>
 
-<div class="swot-box">
+<div>
 <h3>Threats</h3>
-Competitive consulting market regulatory changes client trust acquisition phase
+Competitive consulting landscape regulatory change adaptation
 </div>
 
 </div>
@@ -301,26 +358,31 @@ Competitive consulting market regulatory changes client trust acquisition phase
 </section>
 
 
-<section id="contact">
+
+<section id="contact" class="contact">
 
 <h2>Contact</h2>
 
-<p>
-At Vistara Nexus Consulting we support your business journey from setup to growth across the UAE.
-</p>
-
-<p><span class="highlight">Phone:</span> +971 56 985 3322</p>
-<p><span class="highlight">Email:</span> info@vistaranexus.com</p>
-<p><span class="highlight">Website:</span> www.vistaranexus.com</p>
+<p><span>Phone:</span> +971 56 985 3322</p>
+<p><span>Email:</span> info@vistaranexus.com</p>
+<p><span>Website:</span> www.vistaranexus.com</p>
 
 </section>
+
 
 
 <footer>
 
-Supporting your business journey from setup to growth across the UAE and beyond.
+Supporting your business journey from setup to growth across the UAE and beyond
 
 </footer>
+
+
+
+<a class="whatsapp" href="https://wa.me/971569853322" target="_blank">
+<i data-lucide="message-circle"></i>
+</a>
+
 
 
 <script>
@@ -328,13 +390,10 @@ Supporting your business journey from setup to growth across the UAE and beyond.
 lucide.createIcons();
 
 function scrollToSection(id){
-document.getElementById(id).scrollIntoView({
-behavior:"smooth"
-});
+document.getElementById(id).scrollIntoView({behavior:"smooth"});
 }
 
 </script>
-
 
 </body>
 </html>
